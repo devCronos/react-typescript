@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import Quotes from './quotes';
 import InspirationalQuote from './quote';
 import Loading from './loading';
@@ -25,9 +25,15 @@ const Application = () => {
   //   fetchRandomQuote().then(setQuote);
   // }, []);
 
+  // type ReducerState = ReturnType<typeof reducer>
+  const reducer = (count: number, newValue: number) => {
+    return newValue;
+  };
+  const [count, setCount] = useReducer(reducer, 0);
+
   const [quotes, setQuotes] = useState<Quote[]>([]);
-  const [count, setCount] = useState<number>(0);
-  const [submitted, setSubmitted] = useState<boolean>(false);
+  // const [count, setCount] = useState<number>(0);
+  // const [submitted, setSubmitted] = useState<boolean>(false);
 
   return (
     <main className="mx-auto w-full max-w-2xl py-16">

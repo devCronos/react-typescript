@@ -1,6 +1,6 @@
 ## Course [React and TypeScript, v2](https://frontendmasters.com/courses/react-typescript-v2/react-component-with-typescript/)
 
-### 💻 STATUS: NEXT - Typing Reducers 01:33:26
+### 💻 STATUS: NEXT - Reducers with Explicit any 01:42:52
 
 ```
 cd name-badges
