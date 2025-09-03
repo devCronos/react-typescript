@@ -1,5 +1,11 @@
 import { rgb } from 'color-convert';
 
+// type HexColor = `#${string}`
+// const isHexColor = (s:string): s is HexColor  => s.startsWith('#')
+// type RGBString = `rgb(${number},${number},${number})`;
+// type ColorFormats = 'rgb' | 'hex' | 'hsl' | 'hsv'
+// type ActionTypes = `update-${ColorFormats}-color`
+
 type UpdateHexColorAction = {
   type: 'update-hex-color';
   payload: {

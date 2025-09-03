@@ -6,7 +6,6 @@ import ColorPicker from './color-picker';
 import { colorReducer, initialState } from '../color-reducer';
 
 const Application = () => {
-  // const [hexColor, setHexColor] = useState('#e56e24');
   const [state, dispatch] = useReducer(colorReducer, initialState);
 
   return (
@@ -21,7 +20,7 @@ const Application = () => {
         }
       />
       <AdjustColors dispatch={dispatch} hexColor={state.hexColor} />
-      <RelatedColors hexColor={state.hexColor} />
+      <RelatedColors dispatch={dispatch} hexColor={state.hexColor} />
       <SavedColors hexColor={state.hexColor} />
     </div>
   );
